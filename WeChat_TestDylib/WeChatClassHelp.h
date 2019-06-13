@@ -9,11 +9,17 @@
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
 
-@class WCTableViewCellManager;
+#pragma mark - Util
+
+@interface WCBizUtil : NSObject
+
++ (id)dictionaryWithDecodedComponets:(id)arg1 separator:(id)arg2;
+
+@end
 
 @interface SKBuiltinBuffer_t : NSObject
 
-@property(retain, nonatomic) NSData *buffer; // @dynamic buffer;
+@property (retain, nonatomic) NSData *buffer; // @dynamic buffer;
 
 @end
 
@@ -63,7 +69,7 @@
 
 @interface WCRedEnvelopesControlData : NSObject
 
-@property(retain, nonatomic) CMessageWrap *m_oSelectedMessageWrap;
+@property (retain, nonatomic) CMessageWrap *m_oSelectedMessageWrap;
 
 @end
 
@@ -80,18 +86,81 @@
 
 @interface HongBaoRes : NSObject
 
-@property(retain, nonatomic) SKBuiltinBuffer_t *retText; // @dynamic retText;
-@property(nonatomic) int cgiCmdid; // @dynamic cgiCmdid;
+@property (retain, nonatomic) SKBuiltinBuffer_t *retText; // @dynamic retText;
+@property (nonatomic) int cgiCmdid; // @dynamic cgiCmdid;
 
 @end
 
 @interface HongBaoReq : NSObject
 
-@property(retain, nonatomic) SKBuiltinBuffer_t *reqText; // @dynamic reqText;
+@property (retain, nonatomic) SKBuiltinBuffer_t *reqText; // @dynamic reqText;
 
 @end
 
+@interface MMServiceCenter : NSObject
 
++ (instancetype)defaultCenter;
+- (id)getService:(Class)service;
+
+@end
+
+@interface MMLanguageMgr: NSObject
+
+- (id)getStringForCurLanguage:(id)arg1;
+
+
+@end
+
+#pragma mark - Contact
+
+@interface CContact: NSObject <NSCoding>
+
+@property(retain, nonatomic) NSString *m_nsUsrName;
+@property(retain, nonatomic) NSString *m_nsHeadImgUrl;
+@property(retain, nonatomic) NSString *m_nsNickName;
+
+- (id)getContactDisplayName;
+
+@end
+
+@interface CContactMgr : NSObject
+
+- (id)getSelfContact;
+- (id)getContactByName:(id)arg1;
+- (id)getContactForSearchByName:(id)arg1;
+- (_Bool)getContactsFromServer:(id)arg1;
+- (_Bool)isInContactList:(id)arg1;
+- (_Bool)addLocalContact:(id)arg1 listType:(unsigned int)arg2;
+
+@end
+
+#pragma mark - UtilCategory
+
+@interface NSMutableDictionary (SafeInsert)
+
+- (void)safeSetObject:(id)arg1 forKey:(id)arg2;
+
+@end
+
+@interface NSDictionary (NSDictionary_SafeJSON)
+
+- (id)arrayForKey:(id)arg1;
+- (id)dictionaryForKey:(id)arg1;
+- (double)doubleForKey:(id)arg1;
+- (float)floatForKey:(id)arg1;
+- (long long)int64ForKey:(id)arg1;
+- (long long)integerForKey:(id)arg1;
+- (id)stringForKey:(id)arg1;
+
+@end
+
+@interface NSString (NSString_SBJSON)
+
+- (id)JSONArray;
+- (id)JSONDictionary;
+- (id)JSONValue;
+
+@end
 
 #pragma mark - TableViewManager
 @interface WCTableView : UITableView
@@ -103,7 +172,7 @@
 - (void)insertSection:(id)arg1 At:(unsigned int)arg2;
 
 @end
-
+@class WCTableViewCellManager;
 @interface WCTableViewSectionManager : NSObject
 
 + (id)defaultSection;
