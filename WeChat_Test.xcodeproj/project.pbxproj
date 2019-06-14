@@ -114,7 +114,7 @@
 		5E483F3022AD13D9009ACD69 /* fishhook.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = fishhook.h; path = fishhook/fishhook.h; sourceTree = "<group>"; };
 		5E483F3222AD13D9009ACD69 /* WeChat_TestDylib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WeChat_TestDylib.h; sourceTree = "<group>"; };
 		5E483F3422AD13D9009ACD69 /* WeChat_TestDylib.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeChat_TestDylib.m; sourceTree = "<group>"; };
-		5E483F3E22AD143E009ACD69 /* 微信-7.0.4(越狱应用).ipa */ = {isa = PBXFileReference; lastKnownFileType = file; path = "微信-7.0.4(越狱应用).ipa"; sourceTree = "<group>"; };
+		5E76817E22B3477B00C94B0C /* 微信-7.0.4(越狱应用).ipa */ = {isa = PBXFileReference; lastKnownFileType = file; path = "微信-7.0.4(越狱应用).ipa"; sourceTree = "<group>"; };
 		5EE6086B22B22D980039F5C3 /* WeChatRedEnvelopParam.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WeChatRedEnvelopParam.h; sourceTree = "<group>"; };
 		5EE6086C22B22D990039F5C3 /* WeChatRedEnvelopParam.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeChatRedEnvelopParam.m; sourceTree = "<group>"; };
 		5EE6086F22B22ED50039F5C3 /* WBRedEnvelopParamQueue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBRedEnvelopParamQueue.h; sourceTree = "<group>"; };
@@ -205,7 +205,7 @@
 		5E483EE622AD13D9009ACD69 /* TargetApp */ = {
 			isa = PBXGroup;
 			children = (
-				5E483F3E22AD143E009ACD69 /* 微信-7.0.4(越狱应用).ipa */,
+				5E76817E22B3477B00C94B0C /* 微信-7.0.4(越狱应用).ipa */,
 				5E483EE722AD13D9009ACD69 /* put ipa or app here */,
 			);
 			name = TargetApp;
